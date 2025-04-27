@@ -1,0 +1,103 @@
+REM Ghostkey - Key Test Payload (Version 2)
+REM Tests key combinations with proper delays
+REM April 27, 2025
+
+DEFAULTDELAY 500
+
+REM Wait for device to initialize
+DELAY 4000
+
+REM Start with simple key presses
+STRING Starting comprehensive key test
+ENTER
+ENTER
+
+REM ===== Step 1: Test basic key combinations =====
+STRING === Testing GUI+R key combo ===
+ENTER
+
+REM Using GUI+R to open Run dialog
+GUI r
+DELAY 800
+STRING notepad
+ENTER
+DELAY 1000
+
+STRING GUI+R key combination successful if notepad opened
+ENTER
+ENTER
+
+REM ===== Step 2: Test typing speed =====
+STRING === Testing typing speed ===
+ENTER
+STRING This text should have 150ms delay between characters
+ENTER
+ENTER
+
+REM ===== Step 3: Test CTRL+key combinations =====
+STRING === Testing CTRL+key combinations ===
+ENTER
+STRING Press CTRL+A (should select all text)
+ENTER
+
+CTRL a
+DELAY 800
+STRING CTRL+A successful if all text was selected
+ENTER
+ENTER
+
+STRING Testing CTRL+S
+CTRL s
+DELAY 800
+STRING test.txt
+ENTER
+DELAY 800
+
+REM ===== Step 4: Test ALT+key combinations =====
+STRING === Testing ALT+key combinations ===
+ENTER
+ALT F
+DELAY 800
+STRING ALT+F menu should have opened
+ENTER
+
+REM ===== Step 5: Test SHIFT+key combinations =====
+STRING === Testing SHIFT+key combinations ===
+ENTER
+STRING Testing SHIFT+arrow keys: 
+STRING abcdef
+HOME
+DELAY 500
+SHIFT RIGHT
+SHIFT RIGHT
+SHIFT RIGHT
+DELAY 500
+STRING [Selection should have worked]
+ENTER
+ENTER
+
+REM ===== Step 6: Test Enter, Backspace, Tab =====
+STRING === Testing basic navigation keys ===
+ENTER
+STRING Testing BACKSPACE: ABCDEF
+BACKSPACE
+BACKSPACE
+STRING [Should be ABCD]
+ENTER
+
+STRING Testing TAB:
+TAB
+STRING [Should be indented]
+ENTER
+
+STRING Testing ENTER:
+ENTER
+STRING [Should be on a new line]
+ENTER
+ENTER
+
+REM All tests completed
+STRING === Test complete ===
+ENTER
+STRING All key tests finished successfully.
+ENTER

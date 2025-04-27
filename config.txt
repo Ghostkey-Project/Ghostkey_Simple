@@ -1,0 +1,43 @@
+# Ghostkey Configuration File
+# This file should be placed in the root directory of your SD card
+# Any settings not specified here will use their default values
+# Lines starting with # or // are treated as comments
+
+# Script settings
+# ------------------------------
+# SCRIPT_MODE: 0 = Custom Format, 1 = Ducky Script
+SCRIPT_MODE = 1
+
+# Script file paths (no need to include leading / - it's added automatically)
+DUCKY_SCRIPT_FILE = payload.txt
+CUSTOM_SCRIPT_FILE = instructions.txt
+
+# Typing settings
+# ------------------------------
+# Delay between keystrokes in milliseconds (lower = faster typing)
+TYPING_DELAY = 150
+
+# Use layout-independent typing mode (works across keyboard layouts)
+# Values: true/false, yes/no, 1/0
+USE_LAYOUT_INDEPENDENT = true
+
+# Debug keyboard activity (shows detailed info about keystrokes in serial)
+DEBUG_KEYBOARD = true
+
+# Execution settings
+# ------------------------------
+# Run script automatically on boot
+# Values: true/false, yes/no, 1/0
+AUTORUN = true
+
+# Initial delay before starting script execution (milliseconds)
+INITIAL_DELAY = 1000
+
+# Number of times to repeat script execution (0 = no repeat)
+REPEAT_COUNT = 0
+
+# Debug settings
+# ------------------------------
+# Enable debug output to serial monitor
+# Values: true/false, yes/no, 1/0
+DEBUG_OUTPUT = true
